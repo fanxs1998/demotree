@@ -1,0 +1,14 @@
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+严重: severe
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+警告: warning
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+信息: info
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+配置: cofnig
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+详细: fine
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+较详细: finer
+九月 18, 2021 6:20:25 上午 com.code.JULTest testLogConfig
+非常详细: finest

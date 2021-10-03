@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  scan：当设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true。
+  scanPeriod：设置监测配置文件是否有修改的时间间隔，默认单位是毫秒。
+    当scan为true时，此属性生效。默认的时间间隔为1分钟。
+  debug：当设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。
+    默认值为false。
+-->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!--
+       配置集中管理属性
+       我们可以直接改属性的value值
+       格式：${name}
+    -->
+    <!-- 定义日志的根目录 -->
+    <property name="LOG_HOME" value="./log" />
+    <!-- 项目所在盘符的根目录下, 也可以指定具体盘符位置, 如：E:\\app\\ouyangjun-logback\\logs -->
+    <property name="rootPath" value="/app/logs" />
+
+
+    <!-- 定义输出的格式-->
+    <property name="LOG_PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c %M %L [%thread] %m%n"></property>
+    <!-- 日志输出格式：
+        %-5level 表示级别从左向右显示5个字符宽度
+        %d{yyyy-MM-dd HH:mm:ss} 表示日期时间
+        %c 类的完整信息
+        %M 为method
+        %L 为行号
+        %thread 表示线程名
+        %logger{50} 表示logger名字最长50个字符，否则按照句点分割
+        %m 或者 %msg 表示日志消息
+        %n 表示换行符
+    -->
+
+    <!-- 控制台输出的 appender -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <!--控制台输出流对象 默认 System.out 改为 System.err-->
+        <target>System.err</target>
+        <!--日志消息格式配置-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件输出的 appender -->
+    <appender name="fileLog" class="ch.qos.logback.core.FileAppender">
+        <!--日志文件保存路径-->
+        <file>${LOG_HOME}/logback.log</file>
+        <!--日志消息格式设置-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- html 格式日志文件输出的 appender -->
+    <appender name="htmlFileLog" class="ch.qos.logback.core.FileAppender">
+        <!--日志文件保存路径-->
+        <file>${LOG_HOME}/logback.html</file>
+        <!--日志消息格式设置-->
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout">
+                <pattern>%-5level%d{yyyy-MM-dd HH:mm:ss}%c%M%L%thread%m%n</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+
+    <!-- 日志拆分和归档压缩的 appender -->
+    <appender name="rollFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--日志文件保存路径-->
+        <file>${LOG_HOME}/roll_logback.log</file>
+        <!--日志消息格式设置-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <!--指定拆分规则 满足规则则将拆分 roll_back.log-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--
+              滚动时产生的文件的存放位置及文件名称
+              %d{yyyy-MM-dd}表示按天进行滚动
+              %i表示当文件大小超过maxFileSize时，按照i进行文件滚动
+            -->
+            <!--按照时间和压缩格式拆分-->
+            <fileNamePattern>${LOG_HOME}/rollLog_%d{yyyy-MM-dd-HH-mm-ss}.log%i.zip</fileNamePattern>
+            <!--按照文件大小拆分-->
+            <maxFileSize>1MB</maxFileSize>
+            <!--
+              可选节点，控制保留的归档文件的最大数量，超出数量就删除旧文件。
+              假设设置每天滚动，且maxHistory是365，则只保存最近365天的文件，
+              删除之前的旧文件。注意，删除旧文件时，那些为了归档而创建的目录也会被删除。
+            -->
+            <!--<MaxHistory>10</MaxHistory>-->
+        </rollingPolicy>
+
+        <!--日志级别过滤器&#45;&#45;配合appender使用-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!--日志过滤规则-->
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+<!--            level：过滤级别
+        　　 onMatch：配置符合过滤条件的操作
+        　　 onMismatch：配置不符合过滤条件的操作
+            DENY：返回 DENY，日志将立即被抛弃不再经过其他过滤器
+            NEUTRAL：有序列表的下个过滤器接着处理日志
+            ACCEPT：日志会被立即处理，不再经过剩余过滤器-->
+        </filter>
+    </appender>
+
+    <!-- 把日志异步输出到磁盘文件中，避免每次都进行磁盘IO操作 -->
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <!--指定某个具体的appender-->
+        <appender-ref ref="rollFile" />
+    </appender>
+
+
+    <!--root logger 配置-->
+    <root level="ALL">
+        <appender-ref ref="stdout" />
+        <appender-ref ref="fileLog" />
+        <appender-ref ref="htmlFileLog" />
+       <!-- <appender-ref ref="rollFile" />-->
+        <appender-ref ref="ASYNC" />
+    </root>
+
+    <!--
+        自定义logger对象
+        additivity="false" 自定义logger对象是否继承 rootLogger
+        可以将com.code下的日志消息只输出到控制台
+    -->
+    <logger name="com.code" level="info" additivity="false">
+        <appender-ref ref="stdout" />
+    </logger>
+</configuration>

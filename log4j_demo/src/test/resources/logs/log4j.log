@@ -1,0 +1,16 @@
+[FATAL] 0 com.code.Log4jTest.testQuick(Log4jTest.java:24) 2021-09-21 13:13:46.060 fatal
+[ERROR] 31 com.code.Log4jTest.testQuick(Log4jTest.java:26) 2021-09-21 13:13:46.091 error
+[WARN ] 31 com.code.Log4jTest.testQuick(Log4jTest.java:27) 2021-09-21 13:13:46.091 warn
+[INFO ] 31 com.code.Log4jTest.testQuick(Log4jTest.java:28) 2021-09-21 13:13:46.091 info
+[FATAL] 0 com.code.Log4jTest.testQuick(Log4jTest.java:24) 2021-09-21 13:14:14.769 fatal
+[ERROR] 0 com.code.Log4jTest.testQuick(Log4jTest.java:26) 2021-09-21 13:14:14.769 error
+[WARN ] 0 com.code.Log4jTest.testQuick(Log4jTest.java:27) 2021-09-21 13:14:14.769 warn
+[INFO ] 0 com.code.Log4jTest.testQuick(Log4jTest.java:28) 2021-09-21 13:14:14.769 info
+[DEBUG] 0 com.code.Log4jTest.testQuick(Log4jTest.java:29) 2021-09-21 13:14:14.769 debug
+[TRACE] 47  2021-09-21 13:14:14.816 trace
+[FATAL] 0 com.code.Log4jTest.testQuick(Log4jTest.java:24) 2021-09-21 13:22:07.271 fatal
+[ERROR] 0 com.code.Log4jTest.testQuick(Log4jTest.java:26) 2021-09-21 13:22:07.271 error
+[WARN ] 0 com.code.Log4jTest.testQuick(Log4jTest.java:27) 2021-09-21 13:22:07.271 warn
+[INFO ] 0 com.code.Log4jTest.testQuick(Log4jTest.java:28) 2021-09-21 13:22:07.271 info
+[DEBUG] 0 com.code.Log4jTest.testQuick(Log4jTest.java:29) 2021-09-21 13:22:07.271 debug
+[TRACE] 0  2021-09-21 13:22:07.271 trace

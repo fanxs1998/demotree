@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <property name="LOG_HOME" value="./log" />
+
+    <!-- 定义输出的格式-->
+    <property name="LOG_PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c %M %L [%thread] ----- %m%n"></property>
+
+    <!-- 控制台输出的 appender -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <!--控制台输出流对象 默认 System.out 改为 System.err-->
+        <target>System.err</target>
+        <!--日志消息格式配置-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <springProfile name="dev">
+                <pattern>${LOG_PATTERN}</pattern>
+            </springProfile>
+            <springProfile name="pro">
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c %M %L [%thread] ===== %m%n</pattern>
+            </springProfile>
+        </encoder>
+    </appender>
+
+
+    <!--
+        自定义logger对象
+        additivity="false" 自定义logger对象是否继承 rootLogger
+        可以将com.code下的日志消息只输出到控制台
+    -->
+    <logger name="com.example" level="info" additivity="false">
+        <appender-ref ref="stdout" />
+    </logger>
+</configuration>

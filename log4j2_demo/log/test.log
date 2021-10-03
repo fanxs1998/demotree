@@ -1,0 +1,35 @@
+[2021-10-02 20:34:03.124] [FATAL]  com.code.Log4j2Test:  - log4j2-fatal
+[2021-10-02 20:34:03.139] [ERROR]  com.code.Log4j2Test:  - log4j2-error
+[2021-10-02 20:34:03.139] [WARN ]  com.code.Log4j2Test:  - log4j2-warn
+[2021-10-02 20:34:03.139] [INFO ]  com.code.Log4j2Test:  - log4j2-info
+[2021-10-02 20:34:03.139] [DEBUG]  com.code.Log4j2Test:  - log4j2-debug
+[2021-10-02 20:34:03.139] [TRACE]  com.code.Log4j2Test:  - log4j2-trace
+[2021-10-02 20:34:35.123] [FATAL]  com.code.Log4j2Test:  - log4j2-fatal
+[2021-10-02 20:34:35.123] [ERROR]  com.code.Log4j2Test:  - log4j2-error
+[2021-10-02 20:34:35.123] [WARN ]  com.code.Log4j2Test:  - log4j2-warn
+[2021-10-02 20:34:35.123] [INFO ]  com.code.Log4j2Test:  - log4j2-info
+[2021-10-02 20:34:35.123] [DEBUG]  com.code.Log4j2Test:  - log4j2-debug
+[2021-10-02 20:34:35.123] [TRACE]  com.code.Log4j2Test:  - log4j2-trace
+[2021-10-02 20:36:22.595] [ERROR]  com.code.Slf4jTest:  - error
+[2021-10-02 20:36:22.595] [WARN ]  com.code.Slf4jTest:  - warn
+[2021-10-02 20:36:22.595] [INFO ]  com.code.Slf4jTest:  - info
+[2021-10-02 20:36:22.595] [DEBUG]  com.code.Slf4jTest:  - debug
+[2021-10-02 20:36:22.595] [TRACE]  com.code.Slf4jTest:  - trace
+[2021-10-03 02:40:52.641] [FATAL]  com.code.Log4j2Test:  - log4j2-fatal
+[2021-10-03 02:40:52.641] [ERROR]  com.code.Log4j2Test:  - log4j2-error
+[2021-10-03 02:40:52.641] [WARN ]  com.code.Log4j2Test:  - log4j2-warn
+[2021-10-03 02:40:52.641] [INFO ]  com.code.Log4j2Test:  - log4j2-info
+[2021-10-03 02:40:52.641] [DEBUG]  com.code.Log4j2Test:  - log4j2-debug
+[2021-10-03 02:40:52.641] [TRACE]  com.code.Log4j2Test:  - log4j2-trace
+[2021-10-03 02:48:11.982] [FATAL]  com.code.Log4j2Test:  - log4j2-fatal
+[2021-10-03 02:48:11.982] [ERROR]  com.code.Log4j2Test:  - log4j2-error
+[2021-10-03 02:48:11.982] [WARN ]  com.code.Log4j2Test:  - log4j2-warn
+[2021-10-03 02:48:11.982] [INFO ]  com.code.Log4j2Test:  - log4j2-info
+[2021-10-03 02:48:11.982] [DEBUG]  com.code.Log4j2Test:  - log4j2-debug
+[2021-10-03 02:48:11.982] [TRACE]  com.code.Log4j2Test:  - log4j2-trace
+[2021-10-03 02:49:49.156] [FATAL]  com.code.Log4j2Test:  - log4j2-fatal
+[2021-10-03 02:49:49.156] [ERROR]  com.code.Log4j2Test:  - log4j2-error
+[2021-10-03 02:49:49.156] [WARN ]  com.code.Log4j2Test:  - log4j2-warn
+[2021-10-03 02:49:49.156] [INFO ]  com.code.Log4j2Test:  - log4j2-info
+[2021-10-03 02:49:49.156] [DEBUG]  com.code.Log4j2Test:  - log4j2-debug
+[2021-10-03 02:49:49.156] [TRACE]  com.code.Log4j2Test:  - log4j2-trace

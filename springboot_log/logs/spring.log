@@ -1,0 +1,20 @@
+[INFO ] 2021-10-03 18:34:35 com.example.springboot_log.SpringbootLogApplicationTests [main] ====Starting SpringbootLogApplicationTests using Java 1.8.0_231 on DESKTOP-8OJFQ9P with PID 12640 (started by fanxs in E:\CodingFile\IdeaProjects\demotree\springboot_log)
+[DEBUG] 2021-10-03 18:34:35 com.example.springboot_log.SpringbootLogApplicationTests [main] ====Running with Spring Boot v2.5.5, Spring v5.3.10
+[INFO ] 2021-10-03 18:34:35 com.example.springboot_log.SpringbootLogApplicationTests [main] ====No active profile set, falling back to default profiles: default
+[INFO ] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====Started SpringbootLogApplicationTests in 3.139 seconds (JVM running for 5.274)
+[ERROR] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-error
+[WARN ] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-warn
+[INFO ] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-info
+[DEBUG] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-debug
+[TRACE] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-trace
+[ERROR] 2021-10-03 18:34:38 com.example.springboot_log.SpringbootLogApplicationTests [main] ====log4j2-error
+[INFO ] 2021-10-03 19:05:02 com.example.springboot_log.SpringbootLogApplicationTests [main] ====Starting SpringbootLogApplicationTests using Java 1.8.0_231 on DESKTOP-8OJFQ9P with PID 16044 (started by fanxs in E:\CodingFile\IdeaProjects\demotree\springboot_log)
+[DEBUG] 2021-10-03 19:05:02 com.example.springboot_log.SpringbootLogApplicationTests [main] ====Running with Spring Boot v2.5.5, Spring v5.3.10
+[INFO ] 2021-10-03 19:05:02 com.example.springboot_log.SpringbootLogApplicationTests [main] ====The following profiles are active: pro
+[INFO ] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====Started SpringbootLogApplicationTests in 3.668 seconds (JVM running for 6.521)
+[ERROR] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-error
+[WARN ] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-warn
+[INFO ] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-info
+[DEBUG] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-debug
+[TRACE] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====springboot-trace
+[ERROR] 2021-10-03 19:05:05 com.example.springboot_log.SpringbootLogApplicationTests [main] ====log4j2-error
